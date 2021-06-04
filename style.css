@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --grayish-blue: hsl(229, 6%, 66%);
+  --light-gray: hsl(0, 0%, 98%);
+  --very-dark-blue: hsl(234, 12%, 34%)
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--grayish-blue);
+  background: var(--light-gray);
+}
+
+.container {
+  margin: 0 3.0rem;
+}
+
+.header { 
+  text-align: center;
+  /*padding: 2rem;*/
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+}
+
+h1, h3 {
+  color: var(--very-dark-blue);
+}
+
+.header h1:nth-child(1) {
+  font-weight: 200;
+}
+
+.header>p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.card {
+  max-width: 24rem;
+  max-height: 18rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 14px 20px hsla(212, 86%, 64%, 0.08), 0 10px 10px hsla(212, 86%, 64%, 0.08);
+  margin: 35px auto;
+}
+
+.card>h1 {
+   margin-bottom: 0.5rem;
+}
+
+.card>img {
+  position: relative;
+  bottom: -2rem;
+  right: -15rem;
+  /*top: 20px;
+  left: 250px;*/
+}
+
+.superv {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+
+.teamBuil {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.calcu {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+footer {
+  width: 80%;
+  color: white;
+  background-color: #7541c8;
+  border-radius: 5px;
+  box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  margin: 0.3rem auto;
+}
+
+footer p {
+  max-width: 240px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .container {
+    width: 100%;
+    margin: 2.5rem auto;
+  }
+
+  .header>p {
+    width: 33%;
+    margin: 10px auto;
+    font-size: 0.9rem;
+  }
+  
+  
+  .itemsFour {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+  }
+
+  .card {
+    width: 24rem;
+    margin: 20px -35px;
+  }
+  
+  .superv {
+    grid-row: span 2;
+    align-self: center;
+    justify-self: end;
+    
+  }
+  .teamBuil {
+    justify-self: center;
+  }
+  .karma {
+    grid-area: 2/2/3/3;
+    justify-self: center;
+  }
+  .calcu {
+    grid-row: span 2;
+    align-self: center;
+    justify-self: start;
+  }
+
+}
